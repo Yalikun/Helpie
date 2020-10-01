@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Map</title>
+<link href="mycss.css" rel="stylesheet" type="text/css">
+<style>
+#map {
+	width: 100%;
+	height: 400px;
+	background-color: grey;
+      }
+</style>
+
+
+	
+</head>
+
+
+	
+	
+<body>
+<h1>User and other user nearby<h1>
+
+<div id="map" style="width:100%;height:400px;"></div>
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(-36.874510, 174.709060);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 13};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZ5giS1Srug2ekNuID5ffMrHhxb3Kh8W8&callback=myMap"></script>
+
+</body>
+</html>
